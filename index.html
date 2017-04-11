@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dungeuns and dragons</title>
+
+  <meta charset="utf-8" />
+  <meta name="description" content="Dungeuns and dragons char generator" />
+  <meta name="author" content="Martijn reeuwijk" />
+
+  <link rel="shortcut icon" href="http://dnd.wizards.com/sites/default/files/media/favicon_0.ico">
+
+  <link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="font/dnd.ttf" rel='stylesheet' type='text/css'>
+</head>
+<body>
+
+  <section class="charpage">
+    <section class="charheader">
+      <article id="charname" class="charname">
+        <h2></h2>
+        <input id="firstName" type="text" placeholder="John" value="">
+        <input id="lastName" type="text" placeholder="Lennon" value="">
+        <input id="age" type="text" placeholder="40" value="">
+        <button id="send" type="button" name="button">Verstuur</button>
+      </article>
+      <article class="charbundle">
+        <article class="class">
+          <h2>Character Class</h2>
+          <select class="classpicker" name="">
+            <option value="Bard">Bard</option>
+            <option value="Barbarian">Barbarian</option>
+            <option value="Ranger">Ranger</option>
+            <option value="Wizard">Wizard</option>
+            <option value="Druid">Druid</option>
+            <option value="Sorcerer">Sorcerer</option>
+            <option value="Paladin">Paladin</option>
+            <option value="Fighter">Fighter</option>
+            <option value="Cleric">Cleric</option>
+            <option value="Warlock">Warlock</option>
+            <option value="Monk">Monk</option>
+            <option value="Rogue">Rogue</option>
+          </select>
+        </article>
+        <article class="background">
+          <h2>Character Background</h2>
+          <select class="backgroundpicker" name="">
+            <option value="Gladiator">Gladiator</option>
+            <option value="Acolyte">Acolyte</option>
+            <option value="GuildArtisan">Guild Artisan</option>
+            <option value="Charlatan">Charlatan</option>
+            <option value="Criminal">Criminal</option>
+            <option value="Entertainer">Entertainer</option>
+            <option value="Hermit">Hermit</option>
+            <option value="Noble">Noble</option>
+          </select>
+        </article>
+        <article class="player">
+          <h2>Player name</h2>
+          <input type="text" placeholder="Yoko Ono" value="">
+        </article>
+        <article class="race">
+          <h2>Race</h2>
+          <select class="racepicker" name="">
+            <option value="Human">Human</option>
+            <option value="Dwarf">Dwarf</option>
+            <option value="Gnome">Gnome</option>
+            <option value="Orc">Orc</option>
+            <option value="Elf">Elf</option>
+            <option value="Drow">Drow</option>
+            <option value="Dragonborn">Dragonborn</option>
+            <option value="Half-elf">Half-elf</option>
+            <option value="Half-orc">Half-orc</option>
+            <option value="Halfling">Halfling</option>
+            <option value="Tiefling">Tiefling</option>
+          </select>
+        </article>
+
+        <article class="alignment">
+          <h2>alignment</h2>
+          <select class="alignmentpicker" name="">
+            <option value="Lawfulgood">Lawful good</option>
+            <option value="Neutralgood">Neutral good</option>
+            <option value="Chaoticgood">Chaotic good</option>
+            <option value="Lawfulneutral">Lawful neutral</option>
+            <option value="Trueneutral">(True) neutral</option>
+            <option value="Chaoticneutral">Chaotic neutral</option>
+            <option value="Lawfulevil">Lawful evil</option>
+            <option value="Neutralevil">Neutral evil</option>
+            <option value="Chaoticevil">Chaotic evil</option>
+          </select>
+        </article>
+        <article class="xp">
+          <h2>Character level & proficiency bonus</h2>
+          <input id="xp" type="number" name="" placeholder="0" value="">
+          <article id="mylevel">
+          </article>
+          <article id="proficiencyBonus">
+          </article>
+        </article>
+      </article>
+    </section>
+
+    <section class="attributeholder">
+      <article class="strength">
+      </article>
+      <article class="dexterity">
+      </article>
+      <article class="constitution">
+      </article>
+      <article class="intelligence">
+      </article>
+      <article class="wisdom">
+      </article>
+      <article class="charisma">
+      </article>
+    </section>
+
+    <section class="savingskills">
+      <article class="savingthrow">
+        <h2>Saveing throws</h2>
+        <article class="strengthsave">
+        </article>
+        <article class="dexteritysave">
+        </article>
+        <article class="constitutionsave">
+        </article>
+        <article class="wisdomsave">
+        </article>
+        <article class="charismasave">
+        </article>
+      </article>
+
+      <article class="skills">
+        <h2>Skills</h2>
+        <article class="acrobatics dex">
+          <p>acrobatics</p>
+        </article>
+        <article class="animalhandling wis">
+        </article>
+        <article class="arcana int">
+        </article>
+        <article class="athletics str">
+        </article>
+        <article class="deception cha">
+        </article>
+        <article class="history int">
+        </article>
+        <article class="insight wis">
+        </article>
+        <article class="intimidation cha">
+        </article>
+        <article class="investigation int">
+        </article>
+        <article class="medicine wis">
+        </article>
+        <article class="nature int">
+        </article>
+        <article class="perception wis">
+        </article>
+        <article class="performance cha">
+        </article>
+        <article class="persuasion cha">
+        </article>
+        <article class="religion int">
+        </article>
+        <article class="sleight dex">
+        </article>
+        <article class="stealth dex">
+        </article>
+        <article class="survival wis">
+
+        </article>
+      </article>
+    </section>
+
+    <section class="life">
+      <article class="armorclass">
+        <div class="center">
+          <h2>Armorclass</h2>
+
+        </div>
+
+      </article>
+      <article class="initiative">
+        <div class="center">
+          <h2>Initiative</h2>
+          <p>+2</p>
+        </div>
+
+      </article>
+      <article class="speed">
+        <div class="center">
+          <h2>Speed</h2>
+          <p>30</p>
+
+        </div>
+
+      </article>
+      <article class="hitpoints">
+        <div class="center">
+          <h2>hitpoints</h2>
+
+        </div>
+
+      </article>
+
+    </section>
+
+
+
+  </section> <!-- all in here -->
+
+<!-- Add some cool backgrounds so it doesnt look like shit -->
+  <script src="js/js.js"></script>
+
+</body>
+
+</html>
