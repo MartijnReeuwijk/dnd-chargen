@@ -10,8 +10,6 @@ var constitutionMod = 3;
 var wisdomMod = 3;
 
 
-
-
 // premade chars for insta play
 var premade1 = {
 	// none game rules
@@ -67,7 +65,7 @@ function character(
 	alignment,personality,personality,ideals,bonds,flaws,hitpoints,temphitpoints,
 	armorclass,initiative,speed,strength,dexterity,constitution,intelligence,wisdom,charisma,
 	passiveperception,level,proficiencyBonus
-)
+	)
 {
 	this.name = name;
 	this.lastName = lastName;
@@ -113,10 +111,10 @@ function character(
 
 // var myCharacter = new character()
 
-character.prototype.sayHello = function()
-{
-	alert(this.hello);
-}
+// character.prototype.sayHello = function()
+// {
+// 	alert(this.hello);
+// }
 
 // var myCharacter = new character(
 // name,lastName,age,gender,role,background,race,
@@ -246,7 +244,6 @@ document.querySelector(".attributeholder article").addEventListener("click", fun
 	var roll3 = Math.floor((Math.random() * 6)+1);
 
 	var allrolls = [roll, roll1, roll2, roll3];
-	// console.log(allrolls);
 
 	var resultroll = roll + roll1 + roll2 + roll3;
 	var lowestValue =  Math.min.apply( Math, allrolls );
@@ -258,10 +255,6 @@ document.querySelector(".attributeholder article").addEventListener("click", fun
 	// console.log(resultroll);
 	// console.log(abilityScores);
 
-
-	// Awwwhwhh yea 100x a if statement
-	// i dont use the whole of the modifier scale sice you cant go lower that 3 and higher than 18
-	// set the < on the left side
 	if (abilityScores >= 3) {
 		modifier = -4;
 	}
