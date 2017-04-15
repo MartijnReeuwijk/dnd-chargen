@@ -19,6 +19,14 @@ h2 {
   text-align: center;
   /*text-transform: uppercase;*/
 }
+h3 {
+  text-align: center;
+font-size: 25px;
+}
+button {
+  font-family: "dnd";
+font-size: 30px;
+}
 .charbundle input{
   -webkit-appearance:none;
   outline: none;
@@ -129,6 +137,7 @@ select{
 .center h2{
   font-size: 30px;
 }
+
 .savingskills{
   width: 20%;
   height: 100%;
@@ -141,10 +150,25 @@ select{
   margin: 10px auto;
 }
 .savingthrow article, .skills article{
-  height: 20px;
+  height: 30px;
   width: calc(100% - 10px);
   margin: 1px auto;
-  background-color: purple;
+  position: relative;
+  border-bottom: 2px solid gray;
+}
+.savingthrow article p, .savingthrow h2, .skills article h2, .skills article p{
+  font-size: 25px;
+  line-height: 30px;
+}
+.savingthrow input , .skills input {
+  position: absolute;
+  margin: 10px;
+
+}
+.skills p ,.savingthrow p {
+  width: 10px;
+left: 20px;
+ position: absolute;
 
 }
 .skills {
@@ -152,6 +176,27 @@ select{
   width: calc(100% - 10px);
   margin: 10px auto;
   border: 2px solid;
+  position: relative;
+}
+.skills button {
+  width: calc(100% - 20px);
+  height: 40px;
+  background-color: red;
+  margin: 10px;
+  border: none;
+  font-size: 25px;
+  color: white;
+}
+.skills h2 ,.savingthrow h2 {
+  text-align: right;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  margin: auto;
+}
+.skills h2:first-letter, .savingthrow h2:first-letter {
+    text-transform: uppercase;
 }
 #bigRedButton {
   width: 100px;

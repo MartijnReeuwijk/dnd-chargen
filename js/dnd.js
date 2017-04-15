@@ -5,13 +5,17 @@
 //
 var character = new Object();
 
-
+// all placeholders
 // get value from Object so the role var is the one from characterValue;
 var role = character[role];
 var hitpoints = 0;
+var strengthMod = 3;
 var dexterityMod = 2;
 var constitutionMod = 3;
+var intelligenceMod = 3;
 var wisdomMod = 3;
+var charismaMod = 4;
+
 var level = 0;
 var proficiencyBonus = 2;
 
@@ -28,7 +32,7 @@ function characterValue(){
   var backgroundselect = document.querySelector(".backgroundpicker");
   var background = backgroundselect.options[backgroundselect.selectedIndex].value;
   // Role
-    // this needs to go to my switch statement but return wont do it.
+  // this needs to go to my switch statement but return wont do it.
   var roleSelect = document.querySelector(".classpicker");
   var role = roleSelect.options[roleSelect.selectedIndex].value;
 
@@ -103,42 +107,80 @@ function playerValue(){
   var name = document.getElementById("firstName").value;
   var lastName = document.getElementById("lastName").value;
 
-
-
   character.playerName = name;
   character.playerLastName = lastName;
 
 };
 function calcHitpoints(){
-  var d6 = Math.floor((Math.random() * 6)+1);
-  var d8 = Math.floor((Math.random() * 8)+1);
-  var d10 = Math.floor((Math.random() * 8)+1);
-  var d12 = Math.floor((Math.random() * 12)+1);
+
+  // moved in the loop now i calculate lvl and appropriate hitpoints
+  // var d6 = Math.floor((Math.random() * 6)+1);
+  // var d8 = Math.floor((Math.random() * 8)+1);
+  // var d10 = Math.floor((Math.random() * 10)+1);
+  // var d12 = Math.floor((Math.random() * 12)+1);
+
+// get that levelCalc magic
+  var level = levelCalc(level);
 
   switch (role) {
     case "Wizard" || "Cleric" || "Sorcerer":
-    hitpoints = d6 + constitutionMod;
-    console.log(hitpoints);
+    var allrolls = [];
+    // probably some magic since the increment is +2
+    for (var i = 1; i <= level; i++) {
+      roll[i] = d6 = Math.floor((Math.random() * 6)+1) + constitutionMod;
+      allrolls.push(roll[i]);
+      // this works found it online how the fuck could i have know.
+      var hitpoints = allrolls.reduce(function (a, b) {
+        return a + b;
+      });
+    }
+    
     break;
 
     case "Rogue" || "Warlock" || "Bard":
-    hitpoints = d8 + constitutionMod;
-    console.log(hitpoints);
+    var allrolls = [];
+
+    for (var i = 1; i <= level; i++) {
+      roll[i] = d8 = Math.floor((Math.random() * 8)+1) + constitutionMod;
+      allrolls.push(roll[i]);
+      // this works found it online how the fuck could i have know.
+      var hitpoints = allrolls.reduce(function (a, b) {
+        return a + b;
+      });
+    }
+    
     break;
 
     case "Paladin" || "Fighter" || "Ranger":
-    hitpoints = d10 + constitutionMod;
-    console.log(hitpoints);
+    var allrolls = [];
+
+    for (var i = 1; i <= level; i++) {
+      roll[i] = d10 = Math.floor((Math.random() * 10)+1); + constitutionMod;
+      allrolls.push(roll[i]);
+      // this works found it online how the fuck could i have know.
+      var hitpoints = allrolls.reduce(function (a, b) {
+        return a + b;
+      });
+    }
+    
     break;
 
     // default is the Barbarian im so smart
     default:
-    hitpoints = d12 + constitutionMod;
+    var allrolls = [];
+
+    for (var i = 1; i <= level; i++) {
+      roll[i] = d12 = Math.floor((Math.random() * 12)+1) + constitutionMod;
+      allrolls.push(roll[i]);
+      // this works found it online how the fuck could i have know.
+      var hitpoints = allrolls.reduce(function (a, b) {
+        return a + b;
+      });
+    }
+
     character.hitpoints = hitpoints;
 
-
   }
-
 
   document.querySelector(".hitpoints .center").innerHTML = "<h2>" + "hitpoints" + "</h2>" + "<p>" + hitpoints + "</p>";
   character.hitpoints = hitpoints;
@@ -147,7 +189,7 @@ function calcHitpoints(){
   return hitpoints;
 
 };
-function levelCalc(){
+function levelCalc(level){
   // one spelling error 30m of crying :"(   getElementsById -->  getElementById
   var xp = document.getElementById("xp").value;
 
@@ -188,14 +230,51 @@ function levelCalc(){
     level = 10;
     proficiencyBonus = 4;
   }
-
   document.getElementById("mylevel").innerHTML ="<p>" + level + "</p>";
   document.getElementById("proficiencyBonus").innerHTML = "<p> +" + proficiencyBonus + "</p>";
 
   character.level = level;
   character.proficiencyBonus = proficiencyBonus;
+  return level;
 };
+function placeMods(){
 
+  var strModPlace = document.querySelectorAll(".str p");
+  for (var i = 0; i < strModPlace.length; i++) {
+    strModPlace[i].innerHTML = "<p>" + strengthMod + "</p>";
+  }
+
+  var dexModPlace = document.querySelectorAll(".dex p");
+  for (var i = 0; i < dexModPlace.length; i++) {
+    dexModPlace[i].innerHTML = "<p>" + dexterityMod + "</p>";
+  }
+
+  var conModPlace = document.querySelectorAll(".con p");
+  for (var i = 0; i < conModPlace.length; i++) {
+    conModPlace[i].innerHTML = "<p>" + constitutionMod + "</p>";
+  }
+
+  var intModPlace = document.querySelectorAll(".int p");
+  for (var i = 0; i < intModPlace.length; i++) {
+    intModPlace[i].innerHTML = "<p>" + intelligenceMod + "</p>";
+  }
+
+  var wisModPlace = document.querySelectorAll(".wis p");
+  for (var i = 0; i < wisModPlace.length; i++) {
+    wisModPlace[i].innerHTML = "<p>" + wisdomMod + "</p>";
+  }
+
+  var charModPlace = document.querySelectorAll(".cha p");
+  for (var i = 0; i < charModPlace.length; i++) {
+    charModPlace[i].innerHTML = "<p>" + charismaMod + "</p>";
+  }
+
+}
+
+// now + proficiencyBonus on the selected checkbox
+// need THIS element need it for
+function proficiencyBonusMod(){
+}
 
 // why doesnt this trigger all functions?
 document.getElementById("bigRedButton").addEventListener("click",characterValue,
@@ -203,7 +282,11 @@ roll,
 calcArmorclass,
 playerValue,
 calcHitpoints,
+placeMods,
+proficiencyBonusMod,
 levelCalc);
+
+document.querySelector(".skills button ").addEventListener("click", placeMods);
 
 document.getElementById("xp").addEventListener("blur", levelCalc);
 document.querySelector(".hitpoints").addEventListener("click",calcHitpoints);
