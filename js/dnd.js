@@ -7,7 +7,8 @@ var character = new Object();
 
 // all placeholders
 // get value from Object so the role var is the one from characterValue;
-var role = character[role];
+var role = character.role;
+
 var hitpoints = 0;
 var strengthMod = 3;
 var dexterityMod = 2;
@@ -19,6 +20,8 @@ var charismaMod = 4;
 var level = 0;
 var proficiencyBonus = 2;
 
+// characterValue this name
+//and naming in general fuck
 function characterValue(){
   // Age
   var age = document.getElementById("age").value;
@@ -34,7 +37,8 @@ function characterValue(){
   // Role
   // this needs to go to my switch statement but return wont do it.
   var roleSelect = document.querySelector(".classpicker");
-  var role = roleSelect.options[roleSelect.selectedIndex].value;
+  var roleToString = roleSelect.options[roleSelect.selectedIndex].value;
+  var role = roleToString.toString();
 
   character.age = age;
   character.alignment = alignment;
@@ -93,6 +97,9 @@ function roll(){
   character.modifier = modifier;
 };
 function calcArmorclass(){
+  // cent get role fron global idk why
+  var role = character.role;
+  // case dont work
   switch (role) {
     case "Barbarian":
     var armorclass = 10 + dexterityMod + constitutionMod;
@@ -111,17 +118,18 @@ function playerValue(){
   character.playerLastName = lastName;
 
 };
-function calcHitpoints(){
+function calcHitpoints(role){
 
   // moved in the loop now i calculate lvl and appropriate hitpoints
   // var d6 = Math.floor((Math.random() * 6)+1);
   // var d8 = Math.floor((Math.random() * 8)+1);
   // var d10 = Math.floor((Math.random() * 10)+1);
   // var d12 = Math.floor((Math.random() * 12)+1);
+  var role = character.role;
 
-// get that levelCalc magic
+  // get that levelCalc magic
   var level = levelCalc(level);
-
+  // case dont work
   switch (role) {
     case "Wizard" || "Cleric" || "Sorcerer":
     var allrolls = [];
@@ -134,7 +142,7 @@ function calcHitpoints(){
         return a + b;
       });
     }
-    
+
     break;
 
     case "Rogue" || "Warlock" || "Bard":
@@ -148,7 +156,7 @@ function calcHitpoints(){
         return a + b;
       });
     }
-    
+
     break;
 
     case "Paladin" || "Fighter" || "Ranger":
@@ -162,7 +170,7 @@ function calcHitpoints(){
         return a + b;
       });
     }
-    
+
     break;
 
     // default is the Barbarian im so smart
@@ -237,7 +245,10 @@ function levelCalc(level){
   character.proficiencyBonus = proficiencyBonus;
   return level;
 };
+// TODO: some magic so the bonusses are acually connected
 function placeMods(){
+
+
 
   var strModPlace = document.querySelectorAll(".str p");
   for (var i = 0; i < strModPlace.length; i++) {
@@ -277,14 +288,17 @@ function proficiencyBonusMod(){
 }
 
 // why doesnt this trigger all functions?
-document.getElementById("bigRedButton").addEventListener("click",characterValue,
-roll,
-calcArmorclass,
-playerValue,
-calcHitpoints,
-placeMods,
-proficiencyBonusMod,
-levelCalc);
+document.getElementById("bigRedButton").addEventListener("click", function() {
+characterValue()
+calcArmorclass()
+playerValue()
+placeMods()
+proficiencyBonusMod()
+levelCalc()
+});
+
+// need a mass update how
+document.querySelector(".classpicker").addEventListener("blur", characterValue);
 
 document.querySelector(".skills button ").addEventListener("click", placeMods);
 
@@ -301,3 +315,17 @@ document.querySelector(".intelligence").addEventListener("click",roll);
 document.querySelector(".constitution").addEventListener("click",roll);
 document.querySelector(".charisma").addEventListener("click",roll);
 console.log(character);
+
+// onpage load make standart character im a genius
+// why doesnt this trigger all functions?
+characterValue()
+roll()
+calcArmorclass()
+playerValue()
+calcHitpoints()
+placeMods()
+proficiencyBonusMod()
+levelCalc()
+// TODO:
+// all mods to Object
+document.cookie = character;
