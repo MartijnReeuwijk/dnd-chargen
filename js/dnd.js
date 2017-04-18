@@ -48,6 +48,8 @@ function characterValue(){
   character.background = background;
   character.role = role;
 }
+
+// TODO: change the roll function like the hp values then make it a loop with vari
 function roll(){
   var roll = Math.floor((Math.random() * 6)+1);
   var roll1 = Math.floor((Math.random() * 6)+1);
@@ -58,6 +60,19 @@ function roll(){
   var lowestValue =  Math.min.apply( Math, allrolls );
   var abilityScores = resultroll - lowestValue ;
   var modifier = 0;
+
+// rolls like this
+  // for (var i = 1; i <= level; i++) {
+  //   roll[i] = d6 = Math.floor((Math.random() * 6)+1) + constitutionMod;
+  //   allrolls.push(roll[i]);
+  //   // this works found it online how the fuck could i have know.
+  //   var hitpoints = allrolls.reduce(function (a, b) {
+  //     return a + b;
+  //   });
+  // }
+
+
+
 
   if (abilityScores >= 3) {
     modifier = -4;
@@ -300,11 +315,15 @@ levelCalc()
 });
 
 // need a mass update how
-document.querySelector(".classpicker").addEventListener("blur", characterValue);
+document.querySelector(".classpicker").addEventListener("change", characterValue, calcArmorclass); // why doesnt it work to trigger 2 function doesnt update armorclass?
+document.querySelector(".backgroundpicker").addEventListener("change", characterValue);
+document.querySelector(".racepicker").addEventListener("change", characterValue);
+document.querySelector(".alignmentpicker").addEventListener("change", characterValue);
+
 
 document.querySelector(".skills button ").addEventListener("click", placeMods);
 
-document.getElementById("xp").addEventListener("blur", levelCalc);
+document.getElementById("xp").addEventListener("change", levelCalc);
 document.querySelector(".hitpoints").addEventListener("click",calcHitpoints);
 document.querySelector(".armorclass").addEventListener("click", calcArmorclass);
 document.getElementById("send").addEventListener("click", playerValue);
