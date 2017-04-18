@@ -40,6 +40,8 @@ function characterValue(){
   var roleToString = roleSelect.options[roleSelect.selectedIndex].value;
   var role = roleToString.toString();
 
+  // TODO: add event so when you update your whatever the function fires and puts it in the Object
+
   character.age = age;
   character.alignment = alignment;
   character.race = race;
