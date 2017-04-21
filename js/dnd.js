@@ -49,7 +49,7 @@ function characterValue(){
   character.role = role;
 }
 
-// TODO: change the roll function like the hp values then make it a loop with vari
+// TODO: loop the roll 5 times vari from te loop the get the bonus values and set them to var.
 function roll(){
   var roll = Math.floor((Math.random() * 6)+1);
   var roll1 = Math.floor((Math.random() * 6)+1);
