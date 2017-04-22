@@ -10,12 +10,15 @@
   <link rel="shortcut icon" href="http://dnd.wizards.com/sites/default/files/media/favicon_0.ico">
 
   <link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/monster.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/rollspace.css">
 
   <link href="font/dnd.ttf" rel='stylesheet' type='text/css'>
 </head>
 <body>
+
+<!-- try flexbox -->
 
   <section class="charpage">
     <section class="charheader">
@@ -25,6 +28,10 @@
         <input id="lastName" type="text" placeholder="Lennon" value="">
         <input id="age" type="text" placeholder="40" value="">
         <button id="send" type="button" name="button">Verstuur</button>
+        <button id="getRandomChar" type="button" name="button">Random char</button>
+        <button id="testbutton" class="testbutton" type="button" name="button">monsterbutton</button>
+
+
       </article>
       <article class="charbundle">
         <article class="class">
@@ -104,22 +111,23 @@
     </section>
 
     <section class="attributeholder">
-      <article class="strength" onclick="roll(this);">
+      <article class="strength">
+        <p></p>
+        <p></p>
+      </article>
+      <article class="dexterity">
 
       </article>
-      <article class="dexterity" onclick="roll(this);">
+      <article class="constitution">
 
       </article>
-      <article class="constitution" onclick="roll(this);">
+      <article class="intelligence">
 
       </article>
-      <article class="intelligence" onclick="roll(this);">
+      <article class="wisdom">
 
       </article>
-      <article class="wisdom" onclick="roll(this);">
-
-      </article>
-      <article class="charisma" onclick="roll(this);">
+      <article class="charisma">
 
       </article>
     </section>
@@ -308,16 +316,34 @@
           <h2>hitpoints</h2>
 
         </div>
-
       </article>
 
     </section>
 
-    <button type="button" id="bigRedButton" name="button">Update character</button>
+    <section class="personalityHolder">
+      <article class="personalityTraints">
+        <h3>Personality Traints</h3>
+        <textarea name="name" rows="6" cols="50" placeholder="Here come your personality traints check the player handbook for more information"></textarea>
+      </article>
+      <article class="ideals">
+        <h3>ideals</h3>
+        <textarea name="name" rows="6" cols="50" placeholder="Here come your ideals check the player handbook for more information"></textarea>
+      </article>
+      <article class="bonds">
+        <h3>bonds</h3>
+        <textarea name="name" rows="6" cols="50" placeholder="Here come your bonds check the player handbook for more information"></textarea>
+      </article>
+      <article class="flaws">
+        <h3>flaws</h3>
+        <textarea name="name" rows="6" cols="50" placeholder="Here come your flaws check the player handbook for more information"></textarea>
+      </article>
+    </section>
+
+<!-- Extra space -->
 
     <section class="rollSpace active">
 
-<button type="checkbox" class="dicecion" name="button"></button>
+      <button type="checkbox" class="dicecion" name="button"></button>
 
       <article class="">
         <article class="d2">
@@ -379,12 +405,39 @@
 
     </section>
 
+<!-- monster space  -->
+  <section class="monsterSpace active">
+    <article class="amountChar">
+
+    </article>
+    <article class="charLevel">
+
+    </article>
+    <article class="difficulty">
+
+    </article>
+    <article class="monsterStats">
+      <article class="monsterLevels">
+
+      </article>
+    </article>
+
+  </section>
+
   </section> <!-- all in here -->
+
+  <section class="chosenMonster display">
+    <button type="button" class="closebutton" name="button"></button>
+</section>
+
+
 
   <!-- Add some cool backgrounds so it doesnt look like shit -->
   <!-- <script src="js/js.js"></script> -->
   <script src="js/dnd.js"></script>
   <script src="js/diceroller.js"></script>
+  <script src="js/monster.js"></script>
+  <script src="js/premade.js"></script>
 
 </body>
 

@@ -1,8 +1,3 @@
-// for (var i = 0; i <=5; i++) {
-//   roll()
-//   console.log(i);
-// }
-//
 var character = new Object();
 
 // all placeholders
@@ -10,7 +5,9 @@ var character = new Object();
 var role = character.role;
 
 var hitpoints = 0;
-var strengthMod = 3;
+// get var undefined because the value is not yet set yet
+// var strengthMod = document.querySelector('.strength p:last-of-type').value;
+var strengthMod = 2;
 var dexterityMod = 2;
 var constitutionMod = 3;
 var intelligenceMod = 3;
@@ -41,6 +38,7 @@ function characterValue(){
   var role = roleToString.toString();
 
   // TODO: add event so when you update your whatever the function fires and puts it in the Object
+  // so many vars jezus
 
   character.age = age;
   character.alignment = alignment;
@@ -50,6 +48,8 @@ function characterValue(){
 }
 
 // TODO: loop the roll 5 times vari from te loop the get the bonus values and set them to var.
+// need it to work tehen get the values form the bonus pannel easy peasy lemon squeezy
+// dont know how to do the it tho the loop roll
 function roll(){
   var roll = Math.floor((Math.random() * 6)+1);
   var roll1 = Math.floor((Math.random() * 6)+1);
@@ -61,18 +61,29 @@ function roll(){
   var abilityScores = resultroll - lowestValue ;
   var modifier = 0;
 
-// rolls like this
-  // for (var i = 1; i <= level; i++) {
-  //   roll[i] = d6 = Math.floor((Math.random() * 6)+1) + constitutionMod;
-  //   allrolls.push(roll[i]);
-  //   // this works found it online how the fuck could i have know.
-  //   var hitpoints = allrolls.reduce(function (a, b) {
-  //     return a + b;
-  //   });
-  // }
+  // calc the modifiers here
 
-
-
+  // this doesnt work as i hoped need it to this only works in a switch case
+  //{
+  //   var allrolls = [];
+  //
+  //   console.log(allrolls);
+  //   // var resultroll = roll + roll1 + roll2 + roll3;
+  //   // var lowestValue =  Math.min.apply( Math, allrolls );
+  //   // var abilityScores = resultroll - lowestValue ;
+  //   console.log(abilityScores);
+  //
+  // // rolls like this
+  //   for (var i = 1; i <= 4; i++) {
+  //
+  //     roll[i] = d6 = Math.floor((Math.random() * 6)+1);
+  //     allrolls.push(roll[i]);
+  //     // this works found it online how the fuck could i have known.
+  //     var abilityScores = allrolls.reduce(function (a, b) {
+  //       return a + b;
+  //     });
+  //   }
+  //}
 
   if (abilityScores >= 3) {
     modifier = -4;
@@ -136,17 +147,10 @@ function playerValue(){
 
 };
 function calcHitpoints(role){
-
-  // moved in the loop now i calculate lvl and appropriate hitpoints
-  // var d6 = Math.floor((Math.random() * 6)+1);
-  // var d8 = Math.floor((Math.random() * 8)+1);
-  // var d10 = Math.floor((Math.random() * 10)+1);
-  // var d12 = Math.floor((Math.random() * 12)+1);
   var role = character.role;
 
   // get that levelCalc magic
   var level = levelCalc(level);
-  // case dont work
   switch (role) {
     case "Wizard" || "Cleric" || "Sorcerer":
     var allrolls = [];
@@ -304,15 +308,19 @@ function placeMods(){
 function proficiencyBonusMod(){
 }
 
+// Group challange rating calculasion
+function challenceRate(){
+
+}
 // why doesnt this trigger all functions?
-document.getElementById("bigRedButton").addEventListener("click", function() {
-characterValue()
-calcArmorclass()
-playerValue()
-placeMods()
-proficiencyBonusMod()
-levelCalc()
-});
+// document.getElementById("bigRedButton").addEventListener("click", function() {
+//   characterValue()
+//   calcArmorclass()
+//   playerValue()
+//   placeMods()
+//   proficiencyBonusMod()
+//   levelCalc()
+// });
 
 // need a mass update how
 document.querySelector(".classpicker").addEventListener("change", characterValue, calcArmorclass); // why doesnt it work to trigger 2 function doesnt update armorclass?

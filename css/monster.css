@@ -1,0 +1,23 @@
+.chosenMonster {
+  width: 90vw;
+  height: 90vh;
+  background-color: orange;
+  position: fixed;
+  top: 5vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+}
+.chosenMonster .closebutton {
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  position: relative;
+  float: right;
+  top: 5px;
+  right: 5px;
+}
+.display{
+  display: none;
+}

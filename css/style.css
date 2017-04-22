@@ -12,6 +12,10 @@ body {
   height: 100%;
   width: 100%;
   display: inline-flex;
+  background-image: url("../img/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 h2 {
   font-size: 18px;
@@ -37,7 +41,7 @@ font-size: 30px;
   width: 95vw;
   height: 100%;
   margin: 0 auto;
-  background-color: #F2F2F2;
+  background-color: rgba(242,242,242,.7);
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
@@ -49,22 +53,17 @@ font-size: 30px;
   width: 50%;
   height: 100%;
   float: left;
-
-  background-color: red;
 }
 .charbundle{
   width: 50%;
   height: 100%;
   float: left;
-
-  background-color: blue;
 }
 .charbundle article{
   width: calc(33% - 10px);
   height: 50%;
   margin: 0 5px;
   float: left;
-  background: orange;
 }
 .xp article{
   height: auto;
@@ -83,15 +82,18 @@ font-size: 30px;
   width: 15%;
   min-width: 100px;
   height: 100%;
-  background-color: darkgray;
   float: left;
 }
-
+.attributeholder article {
+  background-image: url("../img/charassets/mods.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
 .attributeholder article, .modbonus{
   width: 90%;
   height: 50px;
   margin: 5px auto;
-  background-color: white;
   padding-bottom: 50%;
   font-size: 70px;
   text-align: center;
@@ -110,7 +112,7 @@ select{
 }
 .life {
   float: left;
-  background-color: green;
+
 }
 .life article {
   min-width: 100px;
@@ -118,10 +120,17 @@ select{
   height: 100px;
   margin: 5px;
   float: left;
-  background-color: white;
   position: relative;
-}
 
+  background-image: url("../img/charassets/speed.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.life article:nth-of-type(1){
+  background-image: url("../img/charassets/armor.svg");
+
+}
 .hitpoints {
 
 }
@@ -142,19 +151,22 @@ select{
   width: 20%;
   height: 100%;
   float: left;
-
 }
 .savingthrow {
-  border: 2px solid;
   width: calc(100% - 10px);
   margin: 10px auto;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../img/charassets/saves.svg");
+
 }
 .savingthrow article, .skills article{
   height: 30px;
   width: calc(100% - 10px);
   margin: 1px auto;
   position: relative;
-  border-bottom: 2px solid gray;
 }
 .savingthrow article p, .savingthrow h2, .skills article h2, .skills article p{
   font-size: 25px;
@@ -175,8 +187,13 @@ left: 20px;
   height: 100%;
   width: calc(100% - 10px);
   margin: 10px auto;
-  border: 2px solid;
   position: relative;
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("../img/charassets/skills.svg");
+
 }
 .skills button {
   width: calc(100% - 20px);
@@ -202,4 +219,38 @@ left: 20px;
   width: 100px;
   height: 100px;
   background-color: red;
+  position: absolute;
+}
+
+.personalityHolder{
+  width: calc(25% - 4px);
+  float: left;
+}
+.personalityHolder h3{
+  margin-top: 2px;
+}
+.personalityHolder article{
+width: 100%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+background-image: url("../img/charassets/bond.svg");
+}
+.personalityHolder article:nth-of-type(1){
+  background-image: url("../img/charassets/pers.svg");
+
+}
+.personalityHolder article:nth-of-type(4){
+  background-image: url("../img/charassets/flaw.svg");
+
+}
+
+.personalityHolder article textarea{
+  width: calc(100% - 14px);
+  border: none;
+  resize: none;
+  margin: 5px;
+  font-size: 25px;
+  font-family: "dnd";
+background: none;
 }
