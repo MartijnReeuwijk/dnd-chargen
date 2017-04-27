@@ -17,6 +17,7 @@ var charismaMod = 4;
 var level = 0;
 var proficiencyBonus = 2;
 
+
 // characterValue this name
 //and naming in general fuck
 function characterValue(){
