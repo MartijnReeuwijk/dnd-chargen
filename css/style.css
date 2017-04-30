@@ -56,7 +56,7 @@ font-size: 30px;
   width: 50%;
   float: left;
 
-  background-image: url("../img/charassets/charstats.svg");
+  /*background-image: url("../img/charassets/charstats.svg");*/
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;

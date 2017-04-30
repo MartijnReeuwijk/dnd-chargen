@@ -1,4 +1,4 @@
-.dicecion{
+.dicecion, .metric{
   width: 50px;
   height: 50px;
   position: absolute;
@@ -15,8 +15,10 @@
   background-position: center;
   background-size: cover;
 }
-
-.dicecion:hover{
+.metric{
+   background-image: url("../img/tape.svg");
+}
+.dicecion:hover ,.metric:hover{
   -webkit-animation:spin 1s ease-in;
       -moz-animation:spin 1s ease-in;
       animation:spin 1s ease-in;
@@ -30,7 +32,7 @@
 @-webkit-keyframes spinrever { 100% { -webkit-transform: rotate(-360deg); } }
 @keyframes spinrever { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } }*/
 
-.rollSpace{
+.rollSpace, .euUnits{
   width: 170px;
   height: auto;
   position: fixed;
@@ -82,8 +84,28 @@ transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   line-height: 50px;
 }
 
+.euUnits{
+  width: 300px;
+  float: left;
+  text-align: center;
+  right: -300px;
+}
+
+.euUnits article{
+  width: 25%;
+  float: left;
+}
+.euUnits article input{
+  width: calc(100% - 10px);
+  margin: 0 auto;
+}
 
 /*actives for animasion*/
 .active{
   right: -170px;
+}
+/*focked something here not going to find out what tho prob changed some right - / + values*/
+.active2{
+  right: 10px;
+
 }

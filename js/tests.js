@@ -108,3 +108,106 @@ function roll() {
 // 	character.abilityScores = abilityScores;
 // 	character.modifier = modifier;
 // };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function feetToMeter() {
+	var feet = document.querySelector(".feet").value;
+	var floormeter = feet * 0.3048;
+	var meter = floormeter.toFixed(2);
+	// document.querySelector(".feet p").innerHTML = "<p>" + meter + "</p>";
+	console.log(meter);
+}
+
+// thought to be smart but cant tofixed the calc
+
+function ounceToGram() {
+	var ounce = document.querySelector(".ounceInput").value * 28.3495231;
+// cool measurements GB ounce is not a eu ounce
+	var gram = ounce.toFixed(2);
+	document.querySelector(".ounce p").innerHTML = "<p>" + gram + "</p>";
+}
+
+
+
+
+
+// all dungeun master function in here
+	// tart units to normal units
+
+// feet to meter calc
+function feetToMeter() {
+	var feet = document.querySelector(".feet").value;
+	var floormeter = feet * 0.3048;
+	var meter = floormeter.toFixed(2);
+	// document.querySelector(".feet p").innerHTML = "<p>" + meter + "</p>";
+	console.log(meter);
+}
+
+function whatTheFuckIsaPint() {
+	var pint = document.querySelector(".pint").value;
+		// look at this wtf murica
+	var floorliter = pint * 0.473176473;
+	var liters = floorliter.toFixed(2);
+	document.querySelector(".pint p").innerHTML = "<p>" + liters + "</p>";
+	console.log(liters);
+}
+
+// since i dont return the value i can use the same varable name
+function gallonToLiter() {
+	var gallon = document.querySelector(".gallon").value;
+	var floorliter = gallon * 3.78541178;
+	var liters = floorliter.toFixed(2);
+	document.querySelector(".gallon p").innerHTML = "<p>" + liters + "</p>";
+}
+
+
+function ounceToGram() {
+	var ounce = document.querySelector(".ounce").value;
+// cool measurements GB ounce is not a eu ounce
+	var floorOunce = ounce * 28.3495231;
+	var gram = floorOunce.toFixed(2);
+	document.querySelector(".ounce p").innerHTML = "<p>" + gram + "</p>";
+}
+
+
+
+
+
+
+document.querySelector(".feet").addEventListener("change", feetToMeter);
+document.querySelector(".pint").addEventListener("change", whatTheFuckIsaPint);
+document.querySelector(".gallon").addEventListener("change", gallonToLiter);
+document.querySelector(".ounce").addEventListener("change", ounceToGram);
+
+
+
+// scale map to show the size of spells.
