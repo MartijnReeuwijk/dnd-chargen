@@ -45,9 +45,17 @@ function ounceToGram() {
 	document.querySelector(".ounce p").innerHTML = "<p>" + gram + "GR" + "</p>";
 }
 
+function lbToKg() {
+	var lb = document.querySelector(".lbInput").value;
+	var floorLb = lb * 0.45359237;
+	var kg = floorLb.toFixed(2);
+	console.log(kg);
+	document.querySelector(".lb p").innerHTML = "<p>" + kg + "KG" + "</p>";
+}
 
 
 document.querySelector(".feet").addEventListener("change", feetToMeter);
 document.querySelector(".pint").addEventListener("change", whatTheFuckIsaPint);
 document.querySelector(".gallon").addEventListener("change", gallonToLiter);
 document.querySelector(".ounce").addEventListener("change", ounceToGram);
+document.querySelector(".lb").addEventListener("change", lbToKg);
