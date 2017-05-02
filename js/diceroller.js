@@ -40,12 +40,17 @@ function rolld20(){
   document.querySelector(".d20Space").innerHTML = "<h2>" + d20 + "</h2>";
 
 };
-function rolld100(){
+function rolld100(event){
+  console.log(event);
+
   var d100 = Math.floor((Math.random() * 100)+1);
   document.querySelector(".d100Space").innerHTML = "<h2>" + d100 + "</h2>";
 
 };
 
+function gerateRandomNumber(range){
+  return Math.random() * range;
+}
 
 // Straight from the hood
 var element = document.querySelector('.rollSpace');
@@ -54,6 +59,8 @@ trigger.addEventListener('click', function(e) {
     e.preventDefault();
     element.classList.toggle('active'); // or whatever your active class is
 });
+
+
 
 
 document.querySelector(".d2").addEventListener("click", rolld2);

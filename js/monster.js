@@ -11,3 +11,21 @@ reee.addEventListener('click', function(q) {
     q.preventDefault();
     testbutton.classList.toggle('display'); // or whatever your active class is
 });
+
+types = ["single", "team", "beast"]
+
+function thisFunction(){
+  ranStength = Math.random() * 8;
+  ranType = types[Math.floor(Math.random()*2)];
+  encounterGenerator(ranStength, ranType, 6);
+}
+
+var myStrength = 8;
+
+
+encounterGenerator(strength, type, duration){
+  showElement(encounterElement);
+  
+}
+
+//Functions with parameters

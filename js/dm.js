@@ -29,13 +29,22 @@ function whatTheFuckIsaPint() {
 }
 
 // since i dont return the value i can use the same varable name
-function gallonToLiter() {
-	var gallon = document.querySelector(".gallonInput").value;
-	var floorliter = gallon * 3.78541178;
-	var liters = floorliter.toFixed(2);
+//event listener
+function giveMeGallons(){
+	var gallons = document.querySelector(".gallonInput").value;
+	var liters = gallonToLiter(gallons);
 	document.querySelector(".gallon p").innerHTML = "<p>" + liters + "L" +"</p>";
 }
 
+function gallonToLiter(gallons) {
+	var floorliter = gallons * 3.78541178;
+	var liters = floorliter.toFixed(2);
+	return liters;
+}
+
+// console.log(gallonToLiter(16));
+// var userGallons = document.querySelector(".gallonInput").value;
+// document.querySelector(".gallon p").innerHTML = "<p>" + gallonToLiter(16) + "L" +"</p>";
 
 function ounceToGram() {
 	var ounce = document.querySelector(".ounceInput").value;
