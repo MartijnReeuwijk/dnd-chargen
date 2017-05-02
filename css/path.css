@@ -1,0 +1,67 @@
+@font-face {
+	font-family: "dnd";
+	src: url("../font/dnd.ttf") format("truetype");
+}
+
+.Dm , .Player {
+	width: 50%;
+	height: 100vh;
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: brightness(20%);
+	-webkit-transition: all 0.75s ease;
+	transition: all 0.75s ease;
+}
+
+.Dm:hover , .Player:hover {
+	filter: brightness(60%);
+	-webkit-transition: all 0.75s ease;
+	transition: all 0.75s ease;
+}
+
+.Dm p , .Player p {
+	font-family: "dnd";
+	font-size: 75px;
+	color: white;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 0;
+}
+
+.Player p{
+	text-align: right;
+}
+
+.Dm{
+	float: left;
+	background-image: url("../img/master.png");
+}
+
+.Player{
+	float: left;
+	background-image: url("../img/player.png");
+}
+
+.path{
+	width: 100%;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	position: absolute;
+	top: 40%;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0 auto;
+	pointer-events: none;
+}
+
+.path h1{
+	font-family: "dnd";
+	font-size: 100px;
+	color: white;
+}
