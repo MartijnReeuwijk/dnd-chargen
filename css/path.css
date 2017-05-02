@@ -16,7 +16,7 @@
 }
 
 .Dm:hover , .Player:hover {
-	filter: brightness(60%);
+	filter: brightness(50%);
 	-webkit-transition: all 0.75s ease;
 	transition: all 0.75s ease;
 }
@@ -64,4 +64,9 @@
 	font-family: "dnd";
 	font-size: 100px;
 	color: white;
+}
+.path img{
+	width: 100%;
+	max-width: 150px;
+	height: auto;
 }
