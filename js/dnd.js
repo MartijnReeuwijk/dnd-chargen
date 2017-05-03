@@ -358,4 +358,3 @@ proficiencyBonusMod()
 levelCalc()
 // TODO:
 // all mods to Object
-document.cookie = character;

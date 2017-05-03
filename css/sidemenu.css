@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "dnd";
+  src: url("../font/dnd.ttf") format("truetype");
+}
+
 .dicecion, .metric{
   width: 50px;
   height: 50px;
@@ -14,6 +19,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+
+
 }
 .metric{
    background-image: url("../img/tape.svg");
@@ -72,6 +79,9 @@ transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+
+  font-family: "dnd";
+
 
 }
 .rollSpace article article:nth-of-type(even){

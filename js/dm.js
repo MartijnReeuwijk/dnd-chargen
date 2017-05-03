@@ -30,12 +30,13 @@ function whatTheFuckIsaPint() {
 
 // since i dont return the value i can use the same varable name
 //event listener
+
+// TODO: change all function to this format
 function giveMeGallons(){
 	var gallons = document.querySelector(".gallonInput").value;
 	var liters = gallonToLiter(gallons);
 	document.querySelector(".gallon p").innerHTML = "<p>" + liters + "L" +"</p>";
 }
-
 function gallonToLiter(gallons) {
 	var floorliter = gallons * 3.78541178;
 	var liters = floorliter.toFixed(2);
@@ -65,6 +66,6 @@ function lbToKg() {
 
 document.querySelector(".feet").addEventListener("change", feetToMeter);
 document.querySelector(".pint").addEventListener("change", whatTheFuckIsaPint);
-document.querySelector(".gallon").addEventListener("change", gallonToLiter);
+document.querySelector(".gallon").addEventListener("change", giveMeGallons);
 document.querySelector(".ounce").addEventListener("change", ounceToGram);
 document.querySelector(".lb").addEventListener("change", lbToKg);
