@@ -16,10 +16,9 @@ function giveMeMeters() {
 
 }
 
-// feet to meter calc
-function feetToMeter() {
+function feetToMeter(feets) {
 	var floormeters = feets * 0.3048;
-	var meters = floormeter.toFixed(2);
+	var meters = floormeters.toFixed(2);
 return meters
 }
 
@@ -29,9 +28,9 @@ function giveMePints(){ // please i can use one
 	document.querySelector(".pint p").innerHTML = "<p>" + liters + "L" +"</p>";
 
 }
-function whatTheFuckIsaPint() {
+function whatTheFuckIsaPint(pints) {
 	var floorliters = pints * 0.473176473;
-	var liters = floorliter.toFixed(2);
+	var liters = floorliters.toFixed(2);
 	return liters;
 }
 
@@ -42,7 +41,7 @@ function giveMeGallons(){
 }
 function gallonToLiter(gallons) {
 	var floorliters = gallons * 3.78541178;
-	var liters = floorliter.toFixed(2);
+	var liters = floorliters.toFixed(2);
 	return liters;
 }
 
@@ -58,7 +57,7 @@ function giveMeGrams(){
 
 function ounceToGram(ounces) {
 	var floorOunces = ounces * 28.3495231;
-	var grams = floorOunce.toFixed(2);
+	var grams = floorOunces.toFixed(2);
 	return grams;
 }
 function giveMeKg(){
@@ -67,9 +66,9 @@ function giveMeKg(){
 	document.querySelector(".lb p").innerHTML = "<p>" + kgs + "KG" + "</p>";
 
 }
-function lbToKg() {
+function lbToKg(lbs) {
 	var floorLbs = lbs * 0.45359237;
-	var kgs = floorLb.toFixed(2);
+	var kgs = floorLbs.toFixed(2);
 	return kgs;
 }
 
