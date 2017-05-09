@@ -5,15 +5,19 @@ var dungeon = new Object();
 
 function makeDungeon() {
   // add more later when time
-  var dungeonLocationOption = ["A building in a city","Catacombs or server beneath a city","Beneath a farmhous","Beneath a graveyard","Beneath a ruined castle","Beneath a ruined city","Beneath a city","In a chasm"];
-  var dungeonCreatorOption = ["Beholder","Cult or religious group","Dwarfs","Elves(inc drow)","Giants","Hobgoblins","Humans"];
-  var dungeonPurposeOption = ["Death trap","Lair","Maze","Mine","Planar gate","Stronghold","Temple or shire","Tomb","Treasure vault"];
-  var dungeonHistoryOption = ["Abandoned by creator","Abandoned due to plague","Conquered by invaders","Creator destroyed by attacking raiders"];
+  var dungeonLocationOption = ["A building in a city","Catacombs or server beneath a city","Beneath a farmhous","Beneath a graveyard","Beneath a ruined castle","Beneath a ruined city","Beneath a city","In a chasm","In a cliff face","In a Glacier","In a gorge","In an mounten pass","In a swamp","Beneath or on top of a mesa","In sea cave","In serveral connected mesas","On a mountain peak","On a promontory","On an island","Underwater","Exotic table"];
 
+  var dungeonCreatorOption = ["Beholder","Cult or religious group","Dwarfs","Elves(inc drow)","Giants","Hobgoblins","Humans","Kuo-toa","Lich","Mind flayer","Yuan-ti","No creator(Natural caverns)"];
+
+  var dungeonPurposeOption = ["Death trap","Lair","Maze","Mine","Planar gate","Stronghold","Temple or shire","Tomb","Treasure vault"];
+
+  var dungeonHistoryOption = ["Abandoned by creator","Abandoned due to plague","Conquered by invaders","Creator destroyed by attacking raiders","Creator destroyed by discovery made within the site","Creator destroyed by internal conflict","Creator destroyed by magical catastrophe","Creator destroyed by natural disaster","Location cursed still in control","Overrun by planar creatures","Site of a great miracle"];
+
+  var exoticLocationOption = ["Among the branches of a tree","atound a geyser","Behind a waterfall","Buried in an avalance","Buries in a sandstorm","Buried in a volcanic ash","Castle or structure sunken in a swamp","Castle or structure at the bottom of a sinkhole","floating on the sea","In a meteorite","On a demiplane of pocket dimension","In a area devastated by a magical catastrophe","On a cloud","In the feywild","In the shadowfell","On an island in an underground sea","In a volcano","On the back of an Gargantuan living creature","Sealed inside a magical dome of force","Inside a Mordenkainen's magnificent mansion"]
 
   // npc's
-  var cultOrGroupOption = ["Demon-worshiping cult","Devil-worshiping cult","Elemntal Air cult","Elemntal earth cult","Elemntal Fire cult","Elemntal Water cult","Worshippers of evil deity","Worshippers of good deity","Worshippers of neutral deity"];
-  var npcAlignmentOption = ["Good","Evil","Neutral","Chaotic Neutral","Lawful Evil","Lawful Good"];
+  var cultOrGroupOption = ["Demon-worshiping cult","Devil-worshiping cult","Elemental Air cult","Elemental earth cult","Elemental Fire cult","Elemental Water cult","Worshippers of evil deity","Worshippers of good deity","Worshippers of neutral deity"];
+  var npcAlignmentOption = ["Good","Evil","Neutral","Chaotic Neutral","Lawful Evil","Lawful Good","Neutral good","Chaotic good","Lawful neutral","Chaotic neutral","Neutral evil","Chaotic evil"];
   var npcClassOption = ["Barbarian","Bard","Cleric","Druid","Fighter","Monk","Paladin","Ranger","Rogue","Sorcerer","Warlock","Wizard"];
 
   // part on being new to JS is knowing what to do but not 100% sure how to make it form scratsh
@@ -37,20 +41,25 @@ function makeDungeon() {
   dungeon.purpose = dungeonPurpose;
   dungeon.history = dungeonHistory;
 
+  // fucking naming it's the hardes part jezus
+  // put it in the if statement so no need to do this code when you are online
+  if (dungeonLocation === "Exotic table") {
+    var getExoticLocation = Math.floor((Math.random() * exoticLocationOption.length));
+    var exoticLocation = exoticLocationOption[getExoticLocation];
+    dungeon.exoticLocation = exoticLocation;
+  }
 
-// fucking naming
   if (dungeonCreator === "Cult or religious group") {
     var getCultOrGroupOption = Math.floor((Math.random() * cultOrGroupOption.length));
     var cultOrGroup = cultOrGroupOption[getDungeonHistoryOption];
-
-    dungeon.cult = cultOrGroup;
+    dungeon.cultOrGroup = cultOrGroup;
   }
+
   if (dungeonCreator === "Humans") {
     var getNpcAlignmentOption = Math.floor((Math.random() * npcAlignmentOption.length));
     var getNpcClassOption = Math.floor((Math.random() * npcClassOption.length));
     var npcAlignment = npcAlignmentOption[getNpcAlignmentOption];
     var npcClass = npcClassOption[getNpcClassOption];
-
     dungeon.npcAlignment = npcAlignment;
     dungeon.npcClass = npcClass;
   }
