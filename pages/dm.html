@@ -1,171 +1,273 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Dungeun master</title>
-		<link rel="shortcut icon" href="http://dnd.wizards.com/sites/default/files/media/favicon_0.ico">
+<head>
+	<meta charset="utf-8">
+	<title>Dungeun master</title>
+	<link rel="shortcut icon" href="http://dnd.wizards.com/sites/default/files/media/favicon_0.ico">
 
-		<link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
-		<link rel="stylesheet" type="text/css" href="../css/sidemenu.css">
-		<link rel="stylesheet" type="text/css" href="../css/monster.css">
+	<link rel="stylesheet" type="text/css" href="http://meyerweb.com/eric/tools/css/reset/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/sidemenu.css">
+	<link rel="stylesheet" type="text/css" href="../css/dm.css">
 
-	</head>
-	<body>
+</head>
+<body>
 
-		<!-- monster space  -->
-<section>
-<article class="condisions">
-	<p></p>
-	<p></p>
-</article>
-<article class="wapeonAtk">
-	<p></p>
-	<p></p>
-	<p></p>
-</article>
-<article class="generalGoods">
-	<p></p>
-	<p></p>
-</article>
-<article class="carryWeight">
-<label for="carryWeightInput">Strength</label>
-	<input type="text" name="carryWeightInput" value="">
-</article>
+	<section>
+		<button type="button" class="condisionsWrapperButton" name="button">Condisions</button>
+
+		<section class="condisionsWrapper display">
+			<article class="condisions">
+
+				<h2>Blinded</h2>
+				<li>A blinded creature can’t see and automatically fails any ability check that requires sight.</li>
+				<li>Attack rolls against the creature have advantage, and the creature’s Attack rolls have disadvantage.</li>
+				<h2>Charmed</h2>
+				<li>A charmed creature can’t Attack the charmer or target the charmer with harmful Abilities or magical effects</li>
+				<li>The charmer has advantage on any ability check to interact socially with the creature.</li>
+				<h2>Deafened</h2>
+				<li>A deafened creature can’t hear and automatically fails any ability check that requires hearing.</li>
+				<h2>Fatigued</h2>
+				<li>See Exhaustion (below).</li>
+				<h2>Frightened</h2>
+				<li>A frightened creature has disadvantage on Ability Checks and Attack rolls while the source of its fear is within line of sight.</li>
+				<li>The creature can’t willingly move closer to the source of its fear.</li>
+				<h2>Grappled</h2>
+				<li>A grappled creature’s speed becomes 0, and it can’t benefit from any bonus to its speed.</li>
+				<li>The condition ends if the Grappler is incapacitated (see the condition).</li>
+				<li>The condition also ends if an effect removes the grappled creature from the reach of the Grappler or Grappling effect, such as when a creature is hurled away by the Thunderwave spell.</li>
+				<h2>Incapacitated</h2>
+				<li>An incapacitated creature can’t take actions or reactions.</li>
+				<h2>Invisible</h2>
+				<li>An invisible creature is impossible to see without the aid of magic or a Special sense. For the purpose of Hiding, the creature is heavily obscured. The creature’s location can be detected by any noise it makes or any tracks it leaves.</li>
+				<li>Attack rolls against the creature have disadvantage, and the creature’s Attack rolls have advantage.</li>
+				<h2>Paralyzed</h2>
+				<li>A paralyzed creature is incapacitated (see the condition) and can’t move or speak.</li>
+				<li>The creature automatically fails Strength and Dexterity saving throws.</li>
+				<li>Attack rolls against the creature have advantage.</li>
+				<li>Any Attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.</li>
+				<h2>Petrified</h2>
+				<li>A petrified creature is transformed, along with any nonmagical object it is wearing or carrying, into a solid inanimate substance (usually stone). Its weight increases by a factor of ten, and it ceases aging.</li>
+				<li>The creature is incapacitated (see the condition), can’t move or speak, and is unaware of its surroundings.</li>
+				<li>Attack rolls against the creature have advantage.</li>
+				<li>The creature automatically fails Strength and Dexterity saving throws.</li>
+				<li>The creature has Resistance to all damage.</li>
+				<li>The creature is immune to poison and disease, although a poison or disease already in its system is suspended, not neutralized.</li>
+				<h2>Poisoned</h2>
+				<li>A poisoned creature has disadvantage on Attack rolls and Ability Checks.</li>
+				<h2>Prone</h2>
+				<li>A prone creature’s only Movement option is to crawl, unless it stands up and thereby ends the condition.</li>
+				<li>The creature has disadvantage on Attack rolls.</li>
+				<li>An Attack roll against the creature has advantage if the attacker is within 5 feet of the creature. Otherwise, the Attack roll has disadvantage.</li>
+				<h2>Restrained</h2>
+				<li>A restrained creature’s speed becomes 0, and it can’t benefit from any bonus to its speed.</li>
+				<li>Attack rolls against the creature have advantage, and the creature’s Attack rolls have disadvantage.</li>
+				<li>he creature has disadvantage on Dexterity saving throws.</li>
+				<h2>Stunned</h2>
+				<li>A stunned creature is incapacitated (see the condition), can’t move, and can speak only falteringly.</li>
+				<li>The creature automatically fails Strength and Dexterity saving throws.</li>
+				<li>Attack rolls against the creature have advantage.</li>
+				<h2>Unconscious</h2>
+				<li>An unconscious creature is incapacitated (see the condition), can’t move or speak, and is unaware of its surroundings.</li>
+				<li>The creature drops whatever it’s holding and falls prone.</li>
+				<li>The creature automatically fails Strength and Dexterity saving throws.</li>
+				<li>Attack rolls against the creature have advantage.</li>
+				<li>Any Attack that hits the creature is a critical hit if the attacker is within 5 feet of the creature.</li>
+				<h2>Exhaustion</h2>
+				<li>Level 1:	Disadvantage on Ability Checks</li>
+				<li>Level 2:	Speed halved</li>
+				<li>Level 3:	Disadvantage on Attack rolls and saving throws</li>
+				<li>Level 4:	Hit point maximum halved</li>
+				<li>Level 5:	Speed reduced to 0</li>
+				<li>Level 6:	Death</li>
+			</article>
+
+		</section>
+
+		<article class="wapeonAtk">
+			<h2></h2>
+			<p></p>
+			<p></p>
+			<p></p>
+		</article>
+		<article class="generalGoods">
+			<h2>General Goods</h2>
+			<p></p>
+			<p></p>
+		</article>
+
+		<article class="initiative">
+			<h2>initiative Order</h2>
+			<button type="button" name="button" class="initiativeMore">Add more</button>
+
+		<article class="">
+			<input type="text" name="" value="" placeholder="Player or creature">
+			<input type="number" name="" value="" placeholder="0">
+		</article>
+		<article class="">
+			<input type="text" name="" value="" placeholder="Player or creature">
+			<input type="number" name="" value="" placeholder="0">
+		</article>
+		</article>
+
+		<article class="carryWeight">
+			<label for="carryWeightInput">Strength</label>
+			<input type="number" class="carryWeightInput" name="carryWeightInput" value="">
+			<p>0lb</p>
+		</article>
+
+		<section class="buildingWrapper">
+			<article class="builing">
+				<img src="" alt="">
+			</article>
+			<section>
+				<ul>
+					<li>Farms</li>
+					<li>Store's</li>
+					<li>Dungeon</li>
+					<li>Wizard Tower</li>
+					<li>Big Farmhouse</li>
+					<li>Mansion</li>
+					<li>Inn</li>
+					<li>Boat's</li>
+				</ul>
+			</section>
+
+		</section>
+
+	</section>
 
 
 
+	<section class="monsterSpace active">
+		<article class="amountChar">
+
+		</article>
+		<article class="charLevel">
+
+		</article>
+		<article class="difficulty">
+
+		</article>
+		<article class="monsterStats">
+			<article class="monsterLevels">
+
+			</article>
+		</article>
+
+	</section>
+
+
+</section> <!-- all in here -->
+
+<section class="chosenMonster display">
+	<button type="button" class="closebutton" name="button"></button>
 </section>
 
 
+<section class="rollSpace active">
+	<button type="checkbox" class="dicecion" name="button"></button>
+	<article class="">
+		<article class="d2">
+			<h2>D2</h2>
+		</article>
+		<article class="d2Space">
+		</article>
+	</article>
+	<article class="">
+		<article class="d4">
+			<h2>D4</h2>
+		</article>
+		<article class="d4Space">
+		</article>
+	</article>
+	<article class="">
+		<article class="d6">
+			<h2>D6</h2>
+		</article>
+		<article class="d6Space">
+		</article>
+	</article>
+	<article class="">
+		<article class="d8">
+			<h2>D8</h2>
+		</article>
+		<article class="d8Space">
+		</article>
+	</article>
+	<article class="">
+		<article class="d10">
+			<h2>D10</h2>
+		</article>
+		<article class="d10Space">
+		</article>
+	</article>
+	<article class="">
+		<article class="d12">
+			<h2>D12</h2>
+		</article>
+		<article class="d12Space">
+		</article>
+	</article>
+	<article class="">
+		<article class="d20">
+			<h2>D20</h2>
+		</article>
+		<article class="d20Space">
+		</article>
+	</article>
+	<article class="">
+		<article class="d100">
+			<h2>D100</h2>
+		</article>
+		<article class="d100Space">
+		</article>
+	</article>
+</section>
 
-		  <section class="monsterSpace active">
-		    <article class="amountChar">
+<!-- All non euro measurements to euro measurements -->
+<section class="euUnits active2 ">
+	<button type="checkbox" class="metric" name="button"></button>
 
-		    </article>
-		    <article class="charLevel">
+	<article class="feet">
+		<label for="feet">Feet</label>
+		<input type="number" class="feetInput" name="input"></input>
+		<p>0 Meter</p>
+	</article>
 
-		    </article>
-		    <article class="difficulty">
+	<article class="pint">
+		<label for="pint">Pint</label>
+		<input type="number" class="pintInput" name="input"></input>
+		<p>0 Pint</p>
+	</article>
 
-		    </article>
-		    <article class="monsterStats">
-		      <article class="monsterLevels">
+	<article class="gallon">
+		<label for="gallon">Gallon</label>
+		<input type="number" class="gallonInput" name="input"></input>
+		<p>0 Gallon</p>
+	</article>
 
-		      </article>
-		    </article>
+	<article class="ounce">
+		<label for="ounce">Ounce</label>
+		<input type="number" class="ounceInput" name="input"></input>
+		<p>0 Ounce</p>
+	</article>
 
-		  </section>
+	<article class="lb">
+		<label for="lb">Lb</label>
+		<input type="number" class="lbInput" name="input"></input>
+		<p>0 LB</p>
+	</article>
 
-		  </section> <!-- all in here -->
+</section>
 
-		  <section class="chosenMonster display">
-		    <button type="button" class="closebutton" name="button"></button>
-		</section>
-
-
-		<section class="rollSpace active">
-	      <button type="checkbox" class="dicecion" name="button"></button>
-	      <article class="">
-	        <article class="d2">
-	          <h2>D2</h2>
-	        </article>
-	        <article class="d2Space">
-	        </article>
-	      </article>
-	      <article class="">
-	        <article class="d4">
-	          <h2>D4</h2>
-	        </article>
-	        <article class="d4Space">
-	        </article>
-	      </article>
-	      <article class="">
-	        <article class="d6">
-	          <h2>D6</h2>
-	        </article>
-	        <article class="d6Space">
-	        </article>
-	      </article>
-	      <article class="">
-	        <article class="d8">
-	          <h2>D8</h2>
-	        </article>
-	        <article class="d8Space">
-	        </article>
-	      </article>
-	      <article class="">
-	        <article class="d10">
-	          <h2>D10</h2>
-	        </article>
-	        <article class="d10Space">
-	        </article>
-	      </article>
-	      <article class="">
-	        <article class="d12">
-	          <h2>D12</h2>
-	        </article>
-	        <article class="d12Space">
-	        </article>
-	      </article>
-	      <article class="">
-	        <article class="d20">
-	          <h2>D20</h2>
-	        </article>
-	        <article class="d20Space">
-	        </article>
-	      </article>
-	      <article class="">
-	        <article class="d100">
-	          <h2>D100</h2>
-	        </article>
-	        <article class="d100Space">
-	        </article>
-	      </article>
-	    </section>
-
-		<!-- All non euro measurements to euro measurements -->
-		<section class="euUnits active2 ">
-		  <button type="checkbox" class="metric" name="button"></button>
-
-		  <article class="feet">
-		    <label for="feet">Feet</label>
-		    <input type="number" class="feetInput" name="input"></input>
-		    <p></p>
-		  </article>
-
-		  <article class="pint">
-		    <label for="pint">Pint</label>
-		    <input type="number" class="pintInput" name="input"></input>
-		    <p></p>
-		  </article>
-
-		  <article class="gallon">
-		    <label for="gallon">Gallon</label>
-		    <input type="number" class="gallonInput" name="input"></input>
-		    <p></p>
-		  </article>
-
-		  <article class="ounce">
-		    <label for="ounce">Ounce</label>
-		    <input type="number" class="ounceInput" name="input"></input>
-		    <p></p>
-		  </article>
-
-		  <article class="lb">
-		    <label for="lb">Lb</label>
-		    <input type="number" class="lbInput" name="input"></input>
-		    <p></p>
-		  </article>
-
-		</section>
-
-	    <script src="../js/diceroller.js"></script>
-	    <script src="../js/metric.js"></script>
-			<script src="../js/monster.js"></script>
-			<script src="../js/dungeon.js"></script>
-			<script src="../js/dm.js"></script>
+<script src="../js/diceroller.js"></script>
+<script src="../js/metric.js"></script>
+<script src="../js/monster.js"></script>
+<script src="../js/dungeon.js"></script>
+<script src="../js/dm.js"></script>
+<!-- Got the rules from https://roll20.net/compendium/dnd5e/Conditions#content -->
 
 
 
-	</body>
+</body>
 </html>

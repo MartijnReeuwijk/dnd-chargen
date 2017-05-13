@@ -1,13 +1,13 @@
 // all dungeun master function in here
-	// tart units to normal units
+// tart units to normal units
 
-	// Straight from the hood again
-	var euUnits = document.querySelector('.euUnits');
-	var metric = document.querySelector('.metric'); // or whatever triggers the toggle
-	metric.addEventListener('click', function(e) {
-	    e.preventDefault();
-	    euUnits.classList.toggle('active2'); // or whatever your active class is
-	});
+// Straight from the hood again
+var euUnits = document.querySelector('.euUnits');
+var metric = document.querySelector('.metric'); // or whatever triggers the toggle
+metric.addEventListener('click', function(e) {
+	e.preventDefault();
+	euUnits.classList.toggle('active2'); // or whatever your active class is
+});
 
 function giveMeMeters() {
 	var feets = document.querySelector(".feetInput").value;
@@ -19,7 +19,7 @@ function giveMeMeters() {
 function feetToMeter(feets) {
 	var floormeters = feets * 0.3048;
 	var meters = floormeters.toFixed(2);
-return meters
+	return meters;
 }
 
 function giveMePints(){ // please i can use one

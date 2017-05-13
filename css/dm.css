@@ -1,0 +1,91 @@
+main {
+  width: 100%;
+  height: 100%;
+}
+.chosenMonster {
+  width: 90vw;
+  height: 90vh;
+  background-color: orange;
+  position: fixed;
+  top: 5vh;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+}
+.chosenMonster .closebutton {
+  width: 25px;
+  height: 25px;
+  background-color: red;
+  position: relative;
+  float: right;
+  top: 5px;
+  right: 5px;
+}
+.display{
+  display: none;
+}
+
+.condisionsWrapper{
+  margin: 0 auto;
+  width: 90vw;
+  height: auto;
+  position: relative;
+}
+.condisions{
+margin: 10px 5px;
+position: relative;
+}
+.condisions h2{
+  margin: 10px;
+  font-family: "dnd";
+  font-size: 25px;
+  line-height:25px;
+}
+
+.wapeonAtk, .generalGoods, .initiative {
+  min-width: 300px;
+  width: 10%;
+  float: left;
+}
+.generalGoods{
+  background: red;
+}
+.initiative {
+  background-color: orange;
+}
+.initiative input{
+  width: calc(50% - 5px);
+  -webkit-appearance:none;
+  outline: none;
+  border: none;
+}
+.initiative article{
+  margin: 5px;
+
+}
+.buildingWrapper{
+  width: 100%;
+  height: 100%;
+}
+.buildingWrapper article{
+  width: calc(50% - 100px);
+  height: 300px;
+  background-color: red;
+  float: left;
+}
+.buildingWrapper article img{
+  width: 100%;
+  height: auto;
+}
+.buildingWrapper section{
+  height: 300px;
+  float: left;
+}
+.buildingWrapper section{
+  background-color: yellow;
+}
+.buildingWrapper section ul li{
+  padding: 5px;
+  background-color: blue;
+}

@@ -105,6 +105,7 @@ transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   width: 20%;
   float: left;
 }
+
 .euUnits article input{
   width: calc(100% - 10px);
   margin: 0 auto;
