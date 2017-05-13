@@ -69,14 +69,15 @@ position: relative;
   height: 100%;
 }
 .buildingWrapper article{
-  width: calc(50% - 100px);
+  /*width: calc(50% - 100px);*/
   height: 300px;
   background-color: red;
   float: left;
+
 }
 .buildingWrapper article img{
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 100%;
 }
 .buildingWrapper section{
   height: 300px;
@@ -86,6 +87,7 @@ position: relative;
   background-color: yellow;
 }
 .buildingWrapper section ul li{
-  padding: 5px;
+  padding: 7px;
   background-color: blue;
+  color: white;
 }
