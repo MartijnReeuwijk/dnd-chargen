@@ -4,6 +4,9 @@ var dungeon = new Object();
 
 
 function makeDungeon() {
+  // added this on top due the if statement
+
+  document.querySelector(".dungeonCreated").innerHTML += "<h1> Dungeon generator </h1>";
   // add more later when time
   var dungeonLocationOption = ["A building in a city","Catacombs or server beneath a city","Beneath a farmhous","Beneath a graveyard","Beneath a ruined castle","Beneath a ruined city","Beneath a city","In a chasm","In a cliff face","In a Glacier","In a gorge","In an mounten pass","In a swamp","Beneath or on top of a mesa","In sea cave","In serveral connected mesas","On a mountain peak","On a promontory","On an island","Underwater","Exotic table"];
 
@@ -47,12 +50,18 @@ function makeDungeon() {
     var getExoticLocation = Math.floor((Math.random() * exoticLocationOption.length));
     var exoticLocation = exoticLocationOption[getExoticLocation];
     dungeon.exoticLocation = exoticLocation;
+// how do i get the Exotic location in the array i mean its fine
+// works same as the book by first showing your first roll value
+document.querySelector(".dungeonCreated").innerHTML += "<p>" + "Location:" + dungeon.exoticLocation + "</p>" ;
+// Dont know to to use this in the function below it give undefined
   }
 
   if (dungeonCreator === "Cult or religious group") {
     var getCultOrGroupOption = Math.floor((Math.random() * cultOrGroupOption.length));
     var cultOrGroup = cultOrGroupOption[getDungeonHistoryOption];
     dungeon.cultOrGroup = cultOrGroup;
+    document.querySelector(".dungeonCreated").innerHTML += "<p>" + "Cult:" + dungeon.cultOrGroup + "</p>" ;
+
   }
 
   if (dungeonCreator === "Humans") {
@@ -62,12 +71,29 @@ function makeDungeon() {
     var npcClass = npcClassOption[getNpcClassOption];
     dungeon.npcAlignment = npcAlignment;
     dungeon.npcClass = npcClass;
+
+    document.querySelector(".dungeonCreated").innerHTML += "<p>" + "NPC Alignment:" + dungeon.npcAlignment + "</p>" ;
+    document.querySelector(".dungeonCreated").innerHTML += "<p>" + "NPC class:" + dungeon.npcClass + "</p>" ;
   }
+  showDungeon()
 
 }
 makeDungeon();
 console.log(dungeon);
 
+
 function wilderness(){
-  var monument = ["Sealed burial mound or pyramid","Plundered burial mound of pyramid","PLace carved into a mountenside or cliff"];
+  var monument = ["Sealed burial mound or pyramid","Plundered burial mound of pyramid","Place carved into a mountenside or cliff"];
+}
+
+function showDungeon() {
+
+  document.querySelector(".dungeonCreated").innerHTML += "<p>" + "Location:" + dungeon.location + "</p>";
+  document.querySelector(".dungeonCreated").innerHTML += "<p>" + "Creator:" + dungeon.creator + "</p>" ;
+  document.querySelector(".dungeonCreated").innerHTML += "<p>" + "Purpose:" + dungeon.purpose + "</p>" ;
+  document.querySelector(".dungeonCreated").innerHTML += "<p>" + "History:" + dungeon.history + "</p>" ;
+
+
+
+
 }

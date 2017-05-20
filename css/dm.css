@@ -43,7 +43,7 @@ position: relative;
   line-height:25px;
 }
 
-.wapeonAtk, .generalGoods, .initiative, .carryWeight {
+.wapeonAtk, .generalGoods, .initiative, .carryWeight, .dungeonCreated {
   min-width: 300px;
   width: 10%;
   float: left;
@@ -53,6 +53,8 @@ position: relative;
 }
 .initiative {
   background-color: orange;
+  max-height: 200px;
+  overflow: scroll;
 }
 .initiative input{
   width: calc(50% - 5px);
@@ -91,4 +93,8 @@ position: relative;
   padding: 7px;
   background-color: blue;
   color: white;
+}
+.dungeonCreated h1 {
+  font-size: 35px;
+  color: orange;
 }
