@@ -1,7 +1,7 @@
 // here i generate a dungeon idee from the DMG
 // i changed the rolls a little bit i wont role a d20 and ge that number il  just get a random from array
 var dungeon = new Object();
-
+var settlement = new Object();
 
 function makeDungeon() {
   // added this on top due the if statement
@@ -50,10 +50,10 @@ function makeDungeon() {
     var getExoticLocation = Math.floor((Math.random() * exoticLocationOption.length));
     var exoticLocation = exoticLocationOption[getExoticLocation];
     dungeon.exoticLocation = exoticLocation;
-// how do i get the Exotic location in the array i mean its fine
-// works same as the book by first showing your first roll value
-document.querySelector(".dungeonCreated").innerHTML += "<p>" + "Location:" + dungeon.exoticLocation + "</p>" ;
-// Dont know to to use this in the function below it give undefined
+    // how do i get the Exotic location in the array i mean its fine
+    // works same as the book by first showing your first roll value
+    document.querySelector(".dungeonCreated").innerHTML += "<p>" + "Location:" + dungeon.exoticLocation + "</p>" ;
+    // Dont know to to use this in the function below it give undefined
   }
 
   if (dungeonCreator === "Cult or religious group") {
@@ -86,6 +86,95 @@ function wilderness(){
   var monument = ["Sealed burial mound or pyramid","Plundered burial mound of pyramid","Place carved into a mountenside or cliff"];
 }
 
+function makeSettlement() {
+  settlementRace()
+  settlementRuler()
+  settlementTraints()
+  settlementKnownfor()
+
+}
+function settlementRace() {
+  // the ay this is made its more like the actual rules
+  var d20 = Math.floor((Math.random() * 20) +1 );
+  // damn < & >
+  if (d20 <= 10 && d20 < 11) {
+    var raceRelation = "Harmony";
+  }
+  if (d20 >= 11 && d20 < 15) {
+    var raceRelation = "Tension or rivals";
+  }
+  if (d20 >= 15 && d20 < 17) {
+    var raceRelation = "Racial minorities are conquers";
+  }
+  if (d20 === 17) {
+    var raceRelation = "Racial minorities are rulers";
+  }
+  if (d20 === 18) {
+    var raceRelation = "Racial minorities are refugies";
+  }
+  if (d20 === 19) {
+    var raceRelation = "Racial majorities oppresses the minorities";
+  }
+  if (d20 === 20) {
+    var raceRelation = "Racial minorities oppresses the majorities";
+  }
+  settlement.raceRelation = raceRelation;
+  console.log(raceRelation);
+  console.log(d20);
+}
+function settlementRuler() {
+  var d20 = Math.floor((Math.random() * 20) +1 );
+  if (d20 <= 5 && d20 < 6) {
+    var ruler = "Respected, fair and just";
+  }
+  if (d20 >= 6 && d20 < 8) {
+    var ruler = "Feard tyrant";
+  }
+  if (d20 === 9) {
+    var ruler = "Weakling manipulated by others";
+  }
+  if (d20 === 10) {
+    var ruler = "illegitimate ruler, simmering civil war";
+  }
+  if (d20 === 11) {
+    var ruler = "Rules or controlled by powerfull monster";
+  }
+  if (d20 === 12) {
+    var ruler = "Mysterious";
+  }
+  if (d20 === 13) {
+    var ruler = "Contested leadership, open fighting";
+  }
+  if (d20 === 14) {
+    var ruler = "Cabal seized power openly";
+  }
+  if (d20 === 15) {
+    var ruler = "Doltish lout";
+  }
+  if (d20 === 16) {
+    var ruler = "On deathbed, claimant compete for power";
+  }
+  if (d20 >= 17 && d20 < 19) {
+    var ruler = "Iron-willed but respected";
+  }
+  if (d20 >= 19 && d20 < 21) {
+    var ruler = "religious leader";
+  }
+
+  settlement.ruler = ruler;
+}
+function settlementTraints() {
+  var Traints = ["Canals in placed of streets","Massive statue or monument","Grand temple","Large fortess","Verdant parks and orchards","River divides town","Major trade center","Headquarters of a powerful family or guild",
+  "Population mostly wealthy","Rundown","Awfull smell (Tanneries, open sewers)","Center of trade of one specific good","Site of many battles","Site of a mythic of magical event","Important libary or archive",
+  "Worship of all gods banned","Sinister reputation","Notable libary or academy","Notable library or academy","Site of important tomb or graveyard","Built atop anciend ruins"];
+  var getTraints = Math.floor((Math.random() * Traints.length));
+  settlement.Traints = getTraints;
+
+}
+
+
+
+console.log(settlement);
 function showDungeon() {
 
   document.querySelector(".dungeonCreated").innerHTML += "<p>" + "Location:" + dungeon.location + "</p>";

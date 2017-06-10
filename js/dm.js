@@ -3,7 +3,7 @@ function giveMeCarry() {
   var carryCapacity = strengthToCarryCapacity(strength);
   document.querySelector(".carryWeight p").innerHTML = "<p>" + carryCapacity + "Lb" + "</p>";
 }
-// Didnt  clac ot Kg because all items are in LB so it easyers to see on the item in the list can always change bit the function to Kg.
+// Didnt  clac to Kg because all items are in LB so it easyers to see on the item in the list can always change bit the function to Kg.
 // ow and naming is halve the battle
 
 // forgot the strength as a parameter noice
