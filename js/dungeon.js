@@ -87,10 +87,10 @@ function wilderness(){
 }
 
 function makeSettlement() {
-  settlementRace()
-  settlementRuler()
-  settlementTraints()
-  settlementKnownfor()
+  settlementRace();
+  settlementRuler();
+  settlementTraints();
+  settlementKnownfor();
 
 }
 function settlementRace() {
@@ -132,6 +132,7 @@ function settlementRuler() {
   }
   if (d20 === 9) {
     var ruler = "Weakling manipulated by others";
+
   }
   if (d20 === 10) {
     var ruler = "illegitimate ruler, simmering civil war";
